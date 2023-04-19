@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C02EnciendanSusMotores", "C02EnciendanSusMotores\C02EnciendanSusMotores.csproj", "{894AA1B9-4177-4F7B-A98D-EEBDD52CE21F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carrera", "Carrera\Carrera.csproj", "{F71EAE3B-B747-42AC-AF18-391B4C2E0217}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{894AA1B9-4177-4F7B-A98D-EEBDD52CE21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894AA1B9-4177-4F7B-A98D-EEBDD52CE21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894AA1B9-4177-4F7B-A98D-EEBDD52CE21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894AA1B9-4177-4F7B-A98D-EEBDD52CE21F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F71EAE3B-B747-42AC-AF18-391B4C2E0217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F71EAE3B-B747-42AC-AF18-391B4C2E0217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F71EAE3B-B747-42AC-AF18-391B4C2E0217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F71EAE3B-B747-42AC-AF18-391B4C2E0217}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BB8BAF3-53E1-4FFA-BC60-9A76DD7A04FD}
+	EndGlobalSection
+EndGlobal
