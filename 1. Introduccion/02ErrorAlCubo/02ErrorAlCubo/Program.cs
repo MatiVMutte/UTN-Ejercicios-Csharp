@@ -12,11 +12,9 @@
             int numero;
             string? linea;
 
-            Console.WriteLine("Ingrese un numero");
-            while(int.TryParse(Console.ReadLine(), out numero) == false || numero <= 0) {
-                Console.WriteLine("No es un numero o no es mayor a 0. Ingrese un numero: ");
-                linea = Console.ReadLine();
-            }
+            do {
+                Console.WriteLine("Ingrese un numero mayor a 0: ");
+            } while (!int.TryParse(Console.ReadLine(), out numero) || numero <= 0);
 
             Console.WriteLine("El numero " + numero + " al cuadrado es: " + Math.Pow(numero, 2));
             Console.WriteLine("El numero " + numero + " al cubo es: " + Math.Pow(numero, 3));
