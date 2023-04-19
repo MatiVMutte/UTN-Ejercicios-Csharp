@@ -9,6 +9,7 @@ namespace _01MaximoMinimoPromedio
     internal class Program
     {
         static void Main(string[] args) {
+            // Ejer 01 - Matute
             int numero;
             int suma = 0;
             int promedio;
