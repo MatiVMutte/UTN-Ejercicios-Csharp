@@ -16,6 +16,10 @@
             this.cantidad = cantidad;
         }
 
+        public Peso(double cantidad, double cotizacion) :this(cantidad) {
+            cotzRespectoDolar = cotizacion;
+        }
+
         #region Conversiones -------------------------------------
 
         public static explicit operator Peso(Dolar dolar) {

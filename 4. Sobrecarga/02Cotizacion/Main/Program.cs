@@ -7,40 +7,23 @@ namespace Main
     {
         static void Main(string[] args) {
 
+            string[] monedas = {"DOLAR", "PESO", "EURO"};
             Dolar dolar;
             Peso peso;
             Euro euro;
-            string[] monedas = {"DOLAR", "PESO", "EURO"};
             string? monedaTengo;
             string? monedaConvertir;
             double cantidad;
-            bool conversionDouble;
             StringBuilder mensaje = new StringBuilder();
             ConsoleKeyInfo tecla;
 
 
             do {
-                do {
-                    Console.Write("¿Que moneda queres convertir? (dolar, peso, euro) >> ");
-                    monedaTengo = Console.ReadLine();
-                    if (monedaTengo != null) {
-                        monedaTengo = monedaTengo.ToUpper();
-                    }
-                } while (!(monedas.Contains(monedaTengo)) || monedaTengo == null);
+                monedaTengo = pedirMoneda("¿Que moneda queres convertir? (dolar, peso, euro) >> ", monedas);
 
-                do {
-                    Console.Write("¿A que moneda queres convertir? (dolar, peso, euro) >> ");
-                    monedaConvertir = Console.ReadLine();
-                    if (monedaConvertir != null) {
-                        monedaConvertir = monedaConvertir.ToUpper();
-                    }
-                } while (!(monedas.Contains(monedaConvertir)) || monedaConvertir == null);
+                monedaConvertir = pedirMoneda("¿A que moneda queres convertir? (dolar, peso, euro) >> ", monedas);
 
-                do {
-                    Console.Write("Ingresa el monto a convertir >> ");
-                    conversionDouble = double.TryParse(Console.ReadLine(), out cantidad);
-                } while (!conversionDouble || cantidad < 1);
-
+                cantidad = pedirMonto("Ingresa el monto a convertir >> ");
 
                 switch (monedaTengo) {
                     case "DOLAR":
@@ -94,6 +77,34 @@ namespace Main
                 mensaje.Clear();
                 Console.Clear();
             } while (tecla.Key == ConsoleKey.S);
+        }
+
+        public static string pedirMensaje(string mensaje) {
+            string? cadena;
+            Console.Write(mensaje);
+            cadena = Console.ReadLine();
+            return cadena;
+        }
+
+        public static string pedirMoneda(string mensaje, string[] monedas) {
+            string moneda;
+            do {
+                moneda = pedirMensaje(mensaje);
+                if (moneda != null) {
+                    moneda = moneda.ToUpper();
+                }
+            } while (!(monedas.Contains(moneda)) || moneda == null);
+            return moneda;
+        }
+
+        public static double pedirMonto(string mensaje) {
+            double cantidad;
+            bool conversionDouble;
+            do {
+                Console.Write(mensaje);
+                conversionDouble = double.TryParse(Console.ReadLine(), out cantidad);
+            } while (!conversionDouble || cantidad < 1);
+            return cantidad;
         }
     }
 }
